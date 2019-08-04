@@ -1,6 +1,6 @@
 # causal_inference
 
-以下のブログのコード
+以下のブログのコード  
 [傾向スコアを用いた因果推論入門~実装編~](https://pira-nino.hatenablog.com/entry/casual_inference_implement)
 
 
