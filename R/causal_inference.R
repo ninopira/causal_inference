@@ -139,13 +139,13 @@ model <- ranger(formula = as.factor(cm_dummy) ~ ., data = df_cp, num.trees = 500
 proximity_matrix <- extract_proximity(model, newdata=df_cp)
 print(dim(proximity_matrix))
 
-# # 対角成分を削除して、testのみの行 / ctrのみの列にする
+# 対角成分を削除して、testのみの行 / ctrのみの列にする
 prox_matrix_remove_diag <- proximity_matrix - diag(nrow(proximity_matrix))
 test_index <- df$cm_dummy == 1
 prox_matrix_remove_diag_test <- prox_matrix_remove_diag[test_index, !test_index]
 print(dim(prox_matrix_remove_diag_test))
 
-# #  各テスト群のデータ(行)に対して最も類似度の高いコントロール群(列)の抽出
+# 各テスト群のデータ(行)に対して最も類似度の高いコントロール群(列)の抽出
 max_index <- apply(prox_matrix_remove_diag_test, 1, which.max)
 df_pair_test <- df[test_index, ]
 df_pair_ctr <- df[max_index, ]
