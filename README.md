@@ -1,5 +1,10 @@
 # causal_inference
-causal_inference
 
-baa
-cccc
+以下のブログのコード  
+(ブログのリンク貼る)
+
+
+# 免責事項
+* 個人の作業コードなので、リファクタなどは厳密に行なっていなのはご了承ください。
+
+* pythonに関してはスクリプト化せずにnotebookでpushしてあります。
